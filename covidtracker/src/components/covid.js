@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./covid.css";
 
 function Covid() {
-  const [data, setData] = useState({});
+  const [data1, setData] = useState({});
   const getCovidData = async () => {
     try {
       const response = await fetch(
@@ -41,7 +41,7 @@ function Covid() {
                 </div>
               </div>
               <p className="card__description">
-                Number of  Active Cases {data?.active}:- Number of Confirmed Cases:- {data?.confirmed}
+                Number of  Active Cases {data1?.active}:- Number of Confirmed Cases:- {data1?.confirmed}
               </p>
             </div>
           </a>
