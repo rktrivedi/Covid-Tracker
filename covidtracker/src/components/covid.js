@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./covid.css";
 
 function Covid() {
-  const [data1, setData] = useState({});
+  const [covidData, setCovidData] = useState({});
   const getCovidData = async () => {
     try {
       const response = await fetch(
@@ -11,7 +11,7 @@ function Covid() {
       );
       const data = await response.json();
       const distData = data.Chhattisgarh.districtData.Durg;
-      setData(distData);
+      setCovidData(distData);
     } catch (error) {
       console.log(error);
     }
@@ -25,7 +25,7 @@ function Covid() {
     <div>
       <ul className="cards">
         <li>
-          <a href="" className="card">
+          <a href="/" className="card">
             <img
               src="https://news.harvard.edu/wp-content/uploads/2023/10/COVID-500x500.jpg"
               className="card__image"
@@ -41,7 +41,7 @@ function Covid() {
                 </div>
               </div>
               <p className="card__description">
-                Number of  Active Cases {data1?.active}:- Number of Confirmed Cases:- {data1?.confirmed}
+                Number of  Active Cases {covidData?.active}:- Number of Confirmed Cases:- {covidData?.confirmed}
               </p>
             </div>
           </a>
