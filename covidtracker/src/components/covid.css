@@ -48,7 +48,7 @@ body {
   z-index: 1;
   border-radius: calc(var(--curve) * 1px);
   background-color: var(--surface-color);
-  transform: translateY(100%);
+  transform: translateY(50%);
   transition: 0.2s ease-in-out;
 }
 
@@ -62,9 +62,7 @@ body {
   align-items: center;
   gap: 2em;
   padding: 2em;
-  border-radius: calc(var(--curve) * 1px) 0 0 0;
   background-color: var(--surface-color);
-  transform: translateY(-100%);
   transition: 0.2s ease-in-out;
 }
 
